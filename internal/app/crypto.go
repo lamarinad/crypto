@@ -1,5 +1,10 @@
 package app
 
-func GetBalance(address string) (string, error) {
+type BalanceResponse struct {
+	Address string `json:"address"`
+	Balance string `json:"balance"`
+}
+
+func GetBalance(Address string) (string, error) {
 	return "800", nil
 }

@@ -1,9 +1,10 @@
 # crypto
 
 development:
-go run .
+go run cmd/main.go
 
 git:
+git status (optional)
 git add .
 git commit -m "что сделала"
 git push origin main
