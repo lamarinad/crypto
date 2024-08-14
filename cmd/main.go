@@ -1,6 +1,7 @@
 package main
 
 import (
+	"cryptotest/internal/app"
 	"fmt"
 	"log"
 	"net/http"
@@ -23,7 +24,7 @@ func balance(w http.ResponseWriter, r *http.Request) {
 	address := r.URL.Path[len("/balance/"):]
 
 	// Получаем баланс кошелька
-	balance, err := getBalance(address)
+	balance, err := app.GetBalance(address)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
